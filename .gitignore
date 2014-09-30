@@ -1,3 +1,6 @@
+# Windows shortcuts
+*.lnk
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

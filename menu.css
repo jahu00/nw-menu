@@ -1,0 +1,89 @@
+#MainMenu,
+#MainMenu .MenuItem > .Submenu
+{
+	background-color:#f4f4f4;
+}
+
+#MainMenu .MenuItem
+{
+	position:relative;
+	cursor:pointer;
+}
+
+#MainMenu .MenuItem > .Header,
+#MainMenu .MenuItem > .Arrow
+{
+	padding:6px;
+}
+
+#MainMenu .MenuItem > .Header
+{
+	white-space:nowrap;
+}
+
+#MainMenu .MenuItem > .Arrow
+{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+#MainMenu .MenuItem > .Arrow:after
+{
+	content:"►";
+}
+
+#MainMenu .MenuItem.disabled
+{
+	color:#ccc;
+	cursor:default;
+	pointer-events: none;
+}
+
+#MainMenu .MenuItem:not(.disabled):hover
+{
+	background-color:#ddd;
+}
+
+#MainMenu > .MenuItem > .Submenu .MenuItem > .Header
+{
+	padding-right:50px;
+}
+
+#MainMenu > .MenuItem
+{
+	display:inline-block;
+}
+
+#MainMenu .MenuItem > .Submenu
+{
+	position:absolute;
+	border:1px solid black;
+	display:none;
+}
+
+#MainMenu .MenuItem:not(.disabled):hover > .Submenu
+{
+	display:block;
+}
+
+#MainMenu > .MenuItem > .Submenu
+{
+	left:0;
+	top:100%;
+}
+
+#MainMenu > .MenuItem > .Submenu .MenuItem > .Submenu
+{
+	left:100%;
+	top:0;
+}
+
+#MainMenu > .MenuItem > .Submenu .MenuSeparator
+{
+	margin-top:6px;
+	margin-bottom:6px;
+	border-bottom:1px solid #ccc;
+	margin-left:2px;
+	margin-right:2px;
+}

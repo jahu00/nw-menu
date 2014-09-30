@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>nw-menu demo</title>
+	<meta content="charset=utf-8" />
+	<script src="./jquery-1.8.3.min.js"></script>
+	<script src="./menu.js"></script>
+	<link rel="stylesheet" href="./menu.css">
+</head>
+<body>
+	<div id="MainMenu">
+		<div class="MenuItem">
+			<div class="Header">File</div>
+			<div class="Submenu">
+				<div class="MenuItem" id="NewMenuItem"><div class="Header">New</div></div>
+				<div class="MenuItem" id="OpenMenuItem"><div class="Header">Open</div></div>
+				<div class="MenuItem"><div class="Header">Save</div></div>
+				<div class="MenuItem"><div class="Header">Save as...</div></div>
+				<div class="MenuSeparator"></div>
+				<div class="MenuItem">
+					<div class="Header">Export</div>
+					<!--<div class="Arrow"></div>-->
+					<div class="Submenu">
+						<div class="MenuItem"><div class="Header">BMP</div></div>
+						<div class="MenuItem"><div class="Header">PNG</div></div>
+						<div class="MenuItem"><div class="Header">JPG</div></div>
+					</div>
+				</div>
+				<div class="MenuSeparator"></div>
+				<div class="MenuItem" id="ExitMenuItem"><div class="Header">Exit</div></div>
+			</div>
+		</div>
+		<div class="MenuItem">
+			<div class="Header">Edit</div>
+			<div class="Submenu">
+				<div class="MenuItem"><div class="Header">Copy</div></div>
+				<div class="MenuItem"><div class="Header">Cut</div></div>
+				<div class="MenuItem"><div class="Header">Paste</div></div>
+			</div>
+		</div>
+		<div class="MenuItem disabled">
+			<div class="Header">About</div>
+		</div>
+	</div>
+	<script>
+		var gui = require('nw.gui');
+		$(function()
+		{
+			menu.init(gui);
+			$('#ExitMenuItem').click(function()
+			{
+				if (confirm("Are you sure you want to quite?"))
+				{
+					$(document.body).append("bye bye<br/>");
+				}
+			});
+			
+			$('#NewMenuItem').click(function()
+			{
+				$(document.body).append("can't touch this<br/>");
+				this.enabled = false;
+			});
+			
+			$('#OpenMenuItem').click(function()
+			{
+				$('#NewMenuItem')[0].enable();
+			});
+		});
+	</script>
+</body>
+</html>
