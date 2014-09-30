@@ -1,4 +1,4 @@
-node-webkit is an awesome envoirment for people who know how to write web applications
+node-webkit is an awesome environment for people who know how to write web applications
 and now want to get into writing desktop applications quickly. However designing gui
 elements (such as menu) through JavaScript code seems to be counter intuitive.
 
@@ -13,7 +13,7 @@ menu.init(gui);
 
 All the .MenuItem elements inside your #MainMenu will gain an extra enabled property
 as well as helper methods enable() and disable(). Through those, you can turn the
-.MenuItem on and off. This will apply regardless of wheter you use html menu or nw.gui
+.MenuItem on and off. This will apply regardless of whether you use html menu or nw.gui
 menu.
 
 This library relies on jquery 1.8.3. Using nw-menu with newer versions of jquery might
@@ -34,3 +34,5 @@ menu.js - the library
 package.json - package for the sample
 
 Check the sample code to see how this library can be used.
+
+This library is available under the WTFPL (http://pl.wikipedia.org/wiki/WTFPL) license. Concerning jquery license please refer to https://jquery.org/license/.
