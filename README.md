@@ -24,6 +24,7 @@ it should work fine even if it's not initialized (though there will be no functi
 for easy enabling and disabling menu items).
 
 Files:
+
 index.html - usage sample
 jquery-1.8.3.min.js - copy of jquery 1.8.3 (used by the sample)
 menu.css - core of the html version of the menu; can be used without the library for making
